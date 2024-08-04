@@ -1,0 +1,10 @@
+- name : Install Nginx
+  ansible.builtin.dnf:
+    name: nginx
+    state: latest
+
+- name: Start Nginx
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    enabled: yes
