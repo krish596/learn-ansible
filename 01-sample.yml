@@ -14,5 +14,6 @@
         enabled: yes
 
 - name: nginx
-  roles:
-    - sample
+  hosts: WEB
+  tasks:
+    - roles
