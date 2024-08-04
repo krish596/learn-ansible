@@ -12,3 +12,7 @@
         name: nginx
         state: restarted
         enabled: yes
+
+- name: nginx
+  roles:
+    - sample
