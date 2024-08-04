@@ -15,5 +15,6 @@
 
 - name: nginx
   hosts: WEB
-  tasks:
-    - roles
+  become: true
+  roles:
+    - sample
