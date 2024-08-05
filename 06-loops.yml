@@ -23,5 +23,5 @@
 
     - name: Print Fruit Names and Quantity
       ansible.builtin.debug:
-        msg: Fruit Name - {{item.name}}, Quantity - {{item.quantity}}
+        msg: Fruit Name - "{{item.name}}", Quantity - "{{item.quantity}}"
       loops: "{{fruits}}"
