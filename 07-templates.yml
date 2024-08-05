@@ -8,5 +8,5 @@
 
     - name: Copied template file
       ansible.builtin.template:
-        src: test.yml
-        dest: /tmp/test.yml
+        src: test.txt
+        dest: /tmp/test.txt
