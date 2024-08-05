@@ -11,11 +11,11 @@
 
 - name: Print Variable
   ansible.builtin.debug:
-    msg: URL - {{URL}}
+    msg: URL = {{URL}}
 
 ### Access the variable using flower braces
 - name: Print Task Level Variable
   ansible.builtin.debug:
-    msg: URL - {{URL}}
+    msg: URL = {{URL}}
   vars:
     URL: tasks.google.com
