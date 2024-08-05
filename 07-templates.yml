@@ -7,6 +7,6 @@
   tasks:
 
     - name: Copied template file
-      ansible.builtin.copy:
+      ansible.builtin.template:
         src: test.yml
         dest: /tmp/test.yml
