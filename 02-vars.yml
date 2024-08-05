@@ -2,8 +2,15 @@
   hosts: WEB
   become: true
   vars:
-    URL: google.com
+    URL: play.google.com
   tasks:
-    - name: Access Variable
+    - name: Print Variable
       ansible.builtin.debug:
         msg: URL - {{URL}}
+
+### Access the variable using flower braces
+    - name: Print Task Level Variable
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+      vars:
+        URL: tasks.google.com

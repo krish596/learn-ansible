@@ -1,10 +1,21 @@
-- name : Install Nginx
-  ansible.builtin.dnf:
-    name: nginx
-    state: latest
+#- name : Install Nginx
+#  ansible.builtin.dnf:
+#    name: nginx
+#    state: latest
+#
+#- name: Start Nginx
+#  ansible.builtin.systemd:
+#    name: nginx
+#    state: restarted
+#    enabled: yes
 
-- name: Start Nginx
-  ansible.builtin.systemd:
-    name: nginx
-    state: restarted
-    enabled: yes
+- name: Print Variable
+  ansible.builtin.debug:
+    msg: URL - {{URL}}
+
+### Access the variable using flower braces
+- name: Print Task Level Variable
+  ansible.builtin.debug:
+    msg: URL - {{URL}}
+  vars:
+    URL: tasks.google.com

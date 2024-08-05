@@ -1,0 +1,17 @@
+- name: Conditions
+  hosts: localhost
+  connection: local
+  become: true
+  vars:
+    fruit: true
+    vegetable: true
+  tasks:
+    - name: Access Fruits
+      ansible.builtin.debug:
+        msg: Fruit Name - {{apple}}
+      when: fruit is defined
+
+    - name: Access Vegetables
+      ansible.builtin.debug:
+        msg: Vegetable - {{carrot}}
+      when: vegetable is defined
