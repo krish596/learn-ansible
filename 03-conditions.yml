@@ -8,10 +8,10 @@
   tasks:
     - name: Access Fruits
       ansible.builtin.debug:
-        msg: Fruit Name - {{apple}}
+        msg: Fruit Name - {{fruit}}
       when: fruit is defined
 
     - name: Access Vegetables
       ansible.builtin.debug:
-        msg: Vegetable - {{carrot}}
+        msg: Vegetable - {{vegetable}}
       when: vegetable is defined
