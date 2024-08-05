@@ -3,8 +3,8 @@
   connection: local
   become: true
   vars:
-    fruit: true
-    vegetable: true
+    fruit: apple
+    vegetable: carrot
   tasks:
     - name: Access Fruits
       ansible.builtin.debug:
