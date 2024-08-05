@@ -14,4 +14,3 @@
     - name: Access Vegetables
       ansible.builtin.debug:
         msg: Vegetable - {{vegetable}}
-      when: vegetable is defined
