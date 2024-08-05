@@ -9,12 +9,15 @@
 
 
   tasks:
-
+    - name: Print Fruits
+      ansible.builtin.debug:
+        msg: Fruit Name - "{{item}}"
+      loops: "{{fruits}}"
 
     - name: Print task level Variable
       ansible.builtin.debug:
         msg: Fruit Name - "{{item}}"
-      loops:
+      loop:
         - mango
         - banana
 
