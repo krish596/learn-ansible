@@ -6,7 +6,7 @@
     fruit_name: apple
   tasks:
 
-    - name: Copied template file
-      ansible.builtin.template:
+
+    - ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
