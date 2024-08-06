@@ -7,3 +7,7 @@
       - kiwi
       - banana
   tasks:
+    - name: Variable
+      ansible.builtin.debug:
+        msg: Fruit Name - "{{ item }}"
+      loop: "{{fruits}}"
