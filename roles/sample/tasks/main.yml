@@ -9,6 +9,12 @@
 #    state: restarted
 #    enabled: yes
 
-- name: Print Variable
+- name: Print variable
   ansible.builtin.debug:
     msg: URL = {{ URL }}
+
+- name: Print variable - task variable defined
+  ansible.builtin.debug:
+    msg: URL = {{ URL }}
+  vars:
+    URL: tasks.google.com
