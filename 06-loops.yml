@@ -6,24 +6,4 @@
     fruits:
       - kiwi
       - banana
-
-
   tasks:
-    - name: Print Fruits
-      ansible.builtin.debug:
-        msg: Fruit Name - "{{ item }}"
-      loops: "{{ fruits }}"
-
-    - name: Print task level Variable
-      ansible.builtin.debug:
-        msg: Fruit Name - "{{ item }}"
-      loop:
-        - mango
-        - banana
-
-    - name: Print Fruit Names and Quantity
-      ansible.builtin.debug:
-        msg: Fruit Name - {{ item.name }}, Quantity - {{ item.quantity }}
-      loops:
-        - { name: "orange", quantity: 2 }
-        - { name: "mango", quantity: 4 }
