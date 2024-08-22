@@ -2,5 +2,5 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: lookup ssm parameter store
+    - name: fetch ssm parameter store values
       debug: msg="{{ lookup('aws_ssm', 'rds.dev.database_name', region='us-east-1' ) }}"
